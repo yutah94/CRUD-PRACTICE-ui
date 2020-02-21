@@ -10,7 +10,7 @@ export default class BookList extends Component {
         }
 
         componentDidMount() {
-            axios.get('http://localhost:5432/api/books')
+            axios.get('http://localhost:5432/api/books', { useNewUrlParser: true, useUnifiedTopology: true })
                 .then(res => { 
                     console.log(res);
                     this.setState({ audiobooks: res.data });
@@ -22,7 +22,7 @@ export default class BookList extends Component {
     render() {
         return (
             <div>
-                { this.state.audiobooks.map(audiobook => <div>{audiobook.title}</div>)}
+                { this.state.audiobooks.map(audiobook => <li key={audiobook._id} >{audiobook.title}{' - '}{audiobook.author}</li>)}
             </div>
         )
     }
