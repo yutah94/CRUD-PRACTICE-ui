@@ -27,7 +27,7 @@ export class AppNavbar extends Component {
             <Navbar color="dark" dark expand="sm" className="mb-5">
                 <Container>
                     <NavbarBrand href="/" color="yellow">Book List</NavbarBrand>
-                    <NavbarToggler onClick={this.togglel} />
+                    <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
                             <NavItem>
