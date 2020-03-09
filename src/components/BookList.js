@@ -2,15 +2,14 @@ import React, { Component } from 'react';
 import { Container, ListGroup, ListGroupItem } from 'reactstrap';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import axios from 'axios';
-import { ButtonToolbar, Button } from 'react-bootstrap';
-import { AddBook } from './AddBook'
-
+import { Button } from 'react-bootstrap';
+import '../StyleSheets/Modal.css'
 
 export default class BookList extends Component {
         constructor(props) {
-            super(props)
+            super(props);
             this.state = {
-                audiobooks: [], addModalShow: false
+                audiobooks: []
             }
         }
 
@@ -25,7 +24,6 @@ export default class BookList extends Component {
 
     render() {
         const {audiobooks} = this.state
-        let AddModalClose = () => this.setState({  addModalShow: false });
 
         return (
             <Container>
@@ -38,6 +36,7 @@ export default class BookList extends Component {
                         className="remove-btn"
                         variant="danger"
                         size="sm"
+                        onSubmit={this.submitHandler}
                         onClick={() => {
                             this.setState(state => ({
                                 audiobooks: state.audiobooks.filter(audiobook => audiobook.title !== title)
@@ -50,34 +49,7 @@ export default class BookList extends Component {
                 ))}
             </TransitionGroup>
             </ListGroup>
-            <br />
-            <br />
-
-            <ButtonToolbar>
-                    <Button
-                    variant='warning'
-                    onClick={() => this.setState({ addModalShow: true })}
-                    >Add Audiobook</Button>
-
-                    <AddBook 
-                    show={this.state.addModalShow}
-                    onHide={AddModalClose}
-                    />
-                </ButtonToolbar>
             </Container>
         )
     }
 }
-
-            //<Button 
-            //     color="dark" 
-            //     style={{marginBottom: '2rem'}} 
-            //     onClick={() => {
-            //     const audiobook = prompt('Enter Book')
-                
-            //     if(audiobook) {
-            //         this.setState(state => ({
-            //             audiobooks: [...state.audiobooks]
-            //         }))
-            //     }
-            // }} >Add Book</Button>

@@ -19,7 +19,8 @@
     "react-transition-group": "^4.3.0",
     "reactstrap": "^8.4.1",
     "shards-react": "^1.0.3",
-    "uuid": "^7.0.0"
+    "uuid": "^7.0.0",
+    "yarn": "^1.22.1"
   },
   "scripts": {
     "start": "react-scripts start",
