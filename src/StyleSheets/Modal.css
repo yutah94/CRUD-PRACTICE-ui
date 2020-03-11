@@ -21,6 +21,13 @@
     background: rgba(255, 255, 255, 1);
     padding: 1em;
 }
+.btn {
+    margin: 3%;
+}
+.app-btn {
+    margin-top: 3%;
+    margin-left: 10%
+}
 .modal-header {
     position: relative;
     top: 0;

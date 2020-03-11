@@ -23,7 +23,7 @@ class App extends Component {
       <div className="App">
       <AppNavbar />
       <BookList />
-      <div>
+      <div className="app-btn">
         <button
       onClick={e => {
         this.showModal();

@@ -8,9 +8,16 @@ import '../StyleSheets/Modal.css'
 export default class BookList extends Component {
         constructor(props) {
             super(props);
+            this.submitHandler = this.submitHandler.bind(this);
             this.state = {
                 audiobooks: []
             }
+        }
+
+        submitHandler(title) {
+            this.setState(state => ({
+                audiobooks: state.audiobooks.filter(audiobook => audiobook.title !== title)
+            }));
         }
 
         componentDidMount() {
@@ -21,6 +28,7 @@ export default class BookList extends Component {
                     alert('Not working')
                 });
     }
+    
 
     render() {
         const {audiobooks} = this.state
@@ -36,12 +44,7 @@ export default class BookList extends Component {
                         className="remove-btn"
                         variant="danger"
                         size="sm"
-                        onSubmit={this.submitHandler}
-                        onClick={() => {
-                            this.setState(state => ({
-                                audiobooks: state.audiobooks.filter(audiobook => audiobook.title !== title)
-                            }));
-                        }}
+                        onClick={this.submitHandler}
                     >&times;</Button>
                         {title}{ ' - ' }{author}
                     </ListGroupItem>

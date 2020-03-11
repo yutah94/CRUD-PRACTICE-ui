@@ -9,7 +9,7 @@ export class Modal extends Component {
         return (
             <div>
                 <div className="modal-main"> {this.props.children}</div>
-                    <div>
+                    <div className="btn">
                                 <button
                                     onClick={e => {
                                     this.props.onClose(e);
