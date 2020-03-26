@@ -1,23 +1,23 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
-import BookList from './components/BookList';
+import TodoList from './components/TodoList';
 import AppNavbar from './components/AppNavbar';
-import AddBook from './components/AddBook';
+import AddTask from './components/AddTask';
 import './StyleSheets/Modal.css';
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.bookAdd = React.createRef();
+    this.todosAdd = React.createRef();
 };
 
   render() {
     return (
       <div className="App">
       <AppNavbar />
-      <AddBook list={this.bookAdd} />
-      <BookList ref={this.bookAdd} />
+      <AddTask list={this.todosAdd} />
+      <TodoList ref={this.todosAdd} />
       </div>
     );
   }

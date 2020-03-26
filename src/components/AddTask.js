@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import '../StyleSheets/Modal.css';
 import axios from 'axios';
 
-export class AddBook extends Component {
+export class AddTask extends Component {
     constructor(props) {
         super(props);
-        this.addBook = this.addBook.bind(this);
-        this.bookAdd = React.createRef();
+        this.addTodos = this.addTodos.bind(this);
+        this.todosAdd = React.createRef();
         this.state = {
-            title: '',
-            author: ''
+            todos: '',
+            responsible: ''
         }
     };
 
@@ -19,10 +19,10 @@ export class AddBook extends Component {
         this.setState(state);
     }
 
-    addBook(e) {
+    addTodos(e) {
         e.preventDefault()
-        const body = { title: this.state.title, author: this.state.author }
-        axios.post(`http://localhost:5432/api/books/`, body )
+        const body = { todos: this.state.todos, responsible: this.state.responsible }
+        axios.post(`http://localhost:5432/api/todos/`, body )
         .then(res => {
             console.log(res)
         })
@@ -37,24 +37,27 @@ export class AddBook extends Component {
     
     render() {
         return (
-            <form onSubmit={this.addBook}>
-                <label>
-                    Title:
+            <form onSubmit={this.addTodos} className="container">
+                <label className="form-inline">
+                    <h4 className="gimmespace">Task:</h4>
                         <input 
                             type="text" 
-                            name="title"
+                            className="form-control"
+                            name="todos"
                             onChange={this.handleChange}
                             />
-                    Author:
+                    <h4 className="gimmespace">Responsible:</h4>
                         <input 
                             type="text" 
-                            name="author" 
+                            className="form-control"
+                            name="responsible" 
                             onChange={this.handleChange}
                             />
                         <input 
                         type="submit" 
-                        value="Add Book"
-                        onClick={this.addBook}
+                        className="form-control btn btn-warning f"
+                        value="Add Todos"
+                        onClick={this.addTodos}
                         />
                 </label>
             </form>
@@ -62,4 +65,4 @@ export class AddBook extends Component {
     }
 }
 
-export default AddBook;
+export default AddTask;

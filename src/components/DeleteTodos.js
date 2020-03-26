@@ -1,17 +1,17 @@
 import React, { Component } from 'react'
 
-export class DeleteBook extends Component {
+export class DeleteTodos extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            audiobooks: []
+            todolists: []
         }
     }
 
     componentDidMount() {
         axios.delete('http://localhost:5432/api/books/:id', { useNewUrlParser: true, useUnifiedTopology: true })
             .then(res => { 
-                this.setState({ audiobooks: res.data });
+                this.setState({ todolists: res.data });
             }).catch(error => {
                 alert('Not working')
             });
@@ -26,4 +26,4 @@ export class DeleteBook extends Component {
     }
 }
 
-export default DeleteBook
+export default DeleteTodos

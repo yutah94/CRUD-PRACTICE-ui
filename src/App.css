@@ -24,3 +24,7 @@
 .audiobook-list{
     text-transform: capitalize;
 }
+
+.form-inline {
+    margin: 5px 3px;
+}

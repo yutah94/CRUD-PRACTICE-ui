@@ -5,21 +5,21 @@ import axios from 'axios';
 import { Button } from 'react-bootstrap';
 import '../StyleSheets/Modal.css';
 
-export default class BookList extends Component {
+export default class TodoList extends Component {
         constructor(props) {
             super(props);
             this.submitHandler = this.submitHandler.bind(this);
             this.updateList = this.updateList.bind(this);
             this.state = {
-                audiobooks: []
+                todolists: []
             }
         };
 
         submitHandler(_id) {
-            axios.delete(`http://localhost:5432/api/books/${_id}`)
+            axios.delete(`http://localhost:5432/api/todos/${_id}`)
             .then(res => {
                 this.setState(state => ({
-                    audiobooks: state.audiobooks.filter(audiobook => audiobook._id !== _id)
+                    todolists: state.todolists.filter(todolist => todolist._id !== _id)
                 }))
             })
             .catch(err => {
@@ -32,10 +32,10 @@ export default class BookList extends Component {
            this.updateList()
     }
 
-        updateList(){
-            axios.get('http://localhost:5432/api/books', { useNewUrlParser: true, useUnifiedTopology: true })
+        updateList(_id){
+            axios.get(`http://localhost:5432/api/todos`, { useNewUrlParser: true, useUnifiedTopology: true })
             .then(res => { 
-                this.setState({ audiobooks: res.data });
+                this.setState({ todolists: res.data });
             }).catch(error => {
                 alert('Not working')
             });
@@ -43,13 +43,13 @@ export default class BookList extends Component {
     
 
     render() {
-        const {audiobooks} = this.state
+        const {todolists} = this.state
 
         return (
             <Container>
             <ListGroup>
             <TransitionGroup className="audiobook-list" >
-                {audiobooks.map(({ _id, title, author }) => (
+                {todolists.map(({ _id, todos, responsible }) => (
                     <CSSTransition key={_id} timeout={500} classNames="fade">
                     <ListGroupItem>
                     <Button
@@ -59,7 +59,7 @@ export default class BookList extends Component {
                         size="sm"
                         onClick={(e) => this.submitHandler(_id)}
                     >&times;</Button>
-                        {title}{ ' - ' }{author}
+                        {todos}{ ' - ' }{responsible}
                     </ListGroupItem>
                     </CSSTransition>
                 ))}
