@@ -16,7 +16,7 @@ export class AddTask extends Component {
     handleChange = e => {
         const state = {};
         state[e.target.getAttribute('name')] = e.target.value;
-        this.setState(state);
+        this.setState(state)
     }
 
     addTodos(e) {
