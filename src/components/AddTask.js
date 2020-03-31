@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../StyleSheets/Modal.css';
 import axios from 'axios';
+import { uriBase } from '../consts';
 
 export class AddTask extends Component {
     constructor(props) {
@@ -22,7 +23,7 @@ export class AddTask extends Component {
     addTodos(e) {
         e.preventDefault()
         const body = { todos: this.state.todos, responsible: this.state.responsible }
-        axios.post(`http://localhost:5432/api/todos/`, body )
+        axios.post(`${uriBase}/api/todos/`, body )
         .then(res => {
             console.log(res)
         })

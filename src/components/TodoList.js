@@ -4,6 +4,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import axios from 'axios';
 import { Button } from 'react-bootstrap';
 import '../StyleSheets/Modal.css';
+import { uriBase } from '../consts';
 
 export default class TodoList extends Component {
         constructor(props) {
@@ -16,7 +17,7 @@ export default class TodoList extends Component {
         };
 
         submitHandler(_id) {
-            axios.delete(`http://localhost:5432/api/todos/${_id}`)
+            axios.delete(`${uriBase}/api/todos/${_id}`)
             .then(res => {
                 this.setState(state => ({
                     todolists: state.todolists.filter(todolist => todolist._id !== _id)
@@ -33,7 +34,7 @@ export default class TodoList extends Component {
     }
 
         updateList(_id){
-            axios.get(`http://localhost:5432/api/todos`, { useNewUrlParser: true, useUnifiedTopology: true })
+            axios.get(`${uriBase}/api/todos`, { useNewUrlParser: true, useUnifiedTopology: true })
             .then(res => { 
                 this.setState({ todolists: res.data });
             }).catch(error => {

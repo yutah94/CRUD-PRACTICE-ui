@@ -9,7 +9,7 @@ export class DeleteTodos extends Component {
     }
 
     componentDidMount() {
-        axios.delete('http://localhost:5432/api/books/:id', { useNewUrlParser: true, useUnifiedTopology: true })
+        axios.delete('http://localhost:5432/api/todos/:id', { useNewUrlParser: true, useUnifiedTopology: true })
             .then(res => { 
                 this.setState({ todolists: res.data });
             }).catch(error => {
