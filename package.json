@@ -2,7 +2,7 @@
   "name": "todo-list-ui",
   "version": "0.1.0",
   "private": true,
-  "hompage": "https://github.com/yutah94/CRUD-PRACTICE-ui.git",
+  "hompage": "https://yutah94.github.io/CRUD-PRACTICE-ui/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
