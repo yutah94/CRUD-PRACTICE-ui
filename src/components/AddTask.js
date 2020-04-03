@@ -30,6 +30,9 @@ export class AddTask extends Component {
         .then(res => {
             this.props.list.current.updateList();
         })
+        .then(res => {
+            document.getElementById("myForm").reset()
+        })
         .catch(err => {
             console.log(err);
         });
@@ -38,7 +41,7 @@ export class AddTask extends Component {
     
     render() {
         return (
-            <form onSubmit={this.addTodos} className="container">
+            <form onSubmit={this.addTodos} className="container" id="myForm">
                 <label className="form-inline">
                     <h4 className="gimmespace">Task:</h4>
                         <input 

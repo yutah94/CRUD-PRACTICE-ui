@@ -29,10 +29,6 @@ export default class TodoList extends Component {
             });
         };
 
-        componentDidMount() {
-           this.updateList()
-    }
-
         updateList(_id){
             axios.get(`${uriBase}/api/todos`, { useNewUrlParser: true, useUnifiedTopology: true })
             .then(res => { 
@@ -41,6 +37,12 @@ export default class TodoList extends Component {
                 alert('Not working')
             });
         }
+
+        componentDidMount() {
+           this.updateList()
+    }
+
+
     
 
     render() {
