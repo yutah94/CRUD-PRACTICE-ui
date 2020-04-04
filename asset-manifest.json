@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/CRUD-PRACTICE-ui/static/css/main.7b07df6f.chunk.css",
-    "main.js": "/CRUD-PRACTICE-ui/static/js/main.181cc520.chunk.js",
-    "main.js.map": "/CRUD-PRACTICE-ui/static/js/main.181cc520.chunk.js.map",
+    "main.js": "/CRUD-PRACTICE-ui/static/js/main.5af1609b.chunk.js",
+    "main.js.map": "/CRUD-PRACTICE-ui/static/js/main.5af1609b.chunk.js.map",
     "runtime-main.js": "/CRUD-PRACTICE-ui/static/js/runtime-main.a7b3b3ba.js",
     "runtime-main.js.map": "/CRUD-PRACTICE-ui/static/js/runtime-main.a7b3b3ba.js.map",
     "static/js/2.e07a880d.chunk.js": "/CRUD-PRACTICE-ui/static/js/2.e07a880d.chunk.js",
     "static/js/2.e07a880d.chunk.js.map": "/CRUD-PRACTICE-ui/static/js/2.e07a880d.chunk.js.map",
     "index.html": "/CRUD-PRACTICE-ui/index.html",
-    "precache-manifest.72c951c61d0265f24998d96fe779aa6c.js": "/CRUD-PRACTICE-ui/precache-manifest.72c951c61d0265f24998d96fe779aa6c.js",
+    "precache-manifest.bd841646e1147a15dff29157ecb4b548.js": "/CRUD-PRACTICE-ui/precache-manifest.bd841646e1147a15dff29157ecb4b548.js",
     "service-worker.js": "/CRUD-PRACTICE-ui/service-worker.js",
     "static/css/main.7b07df6f.chunk.css.map": "/CRUD-PRACTICE-ui/static/css/main.7b07df6f.chunk.css.map",
     "static/js/2.e07a880d.chunk.js.LICENSE.txt": "/CRUD-PRACTICE-ui/static/js/2.e07a880d.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.a7b3b3ba.js",
     "static/js/2.e07a880d.chunk.js",
     "static/css/main.7b07df6f.chunk.css",
-    "static/js/main.181cc520.chunk.js"
+    "static/js/main.5af1609b.chunk.js"
   ]
 }

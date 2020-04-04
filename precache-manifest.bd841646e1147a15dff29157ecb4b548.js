@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b302f6c2855191eb5cc6cbd0febc436a",
+    "revision": "3aedebe1c504ea803ddb4bb6be806fea",
     "url": "/CRUD-PRACTICE-ui/index.html"
   },
   {
-    "revision": "f26719420663cf9d33fc",
+    "revision": "fd8da57ad7f3902f9a1a",
     "url": "/CRUD-PRACTICE-ui/static/css/main.7b07df6f.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/CRUD-PRACTICE-ui/static/js/2.e07a880d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f26719420663cf9d33fc",
-    "url": "/CRUD-PRACTICE-ui/static/js/main.181cc520.chunk.js"
+    "revision": "fd8da57ad7f3902f9a1a",
+    "url": "/CRUD-PRACTICE-ui/static/js/main.5af1609b.chunk.js"
   },
   {
     "revision": "fa22af3a5f2c297c23ff",
