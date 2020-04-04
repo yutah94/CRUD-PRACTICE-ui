@@ -31,7 +31,7 @@ export class AddTask extends Component {
             this.props.list.current.updateList();
         })
         .then(res => {
-            document.getElementById("myForm").reset()
+            document.getElementById("myForm").reset();
         })
         .catch(err => {
             console.log(err);
